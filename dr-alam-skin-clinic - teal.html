@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Alam's Skin Clinic | Expert Dermatologist in Erode</title>
+<meta name="description" content="Dr. Howthul Alam Raja B, MBBS MD DVL – Consultant Clinical & Aesthetic Dermatologist in Erode. Advanced laser treatments for acne, scars, pigmentation, hair loss & anti-aging.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════
+   PALETTE — inspired by Clear Skin's warmth
+   but refined for Dr. Alam's authority
+   ══════════════════════════════════════════
+   White:      Pure clean base
+   Blush:      Warm rose — skin, healing, hope
+   Navy:       Authority, credentials
+   Slate:      Body text
+   Gold:       Premium accent
+   ══════════════════════════════════════════ */
+:root {
+  --white:       #ffffff;
+  --off-white:   #fdf9f7;
+  --cream:       #f8f2ee;
+  --blush:       #e8b4a0;
+  --blush-light: #f2d0c2;
+  --blush-pale:  #fdf0eb;
+  --blush-deep:  #c4785a;
+  --rose:        #d4836a;
+  --navy:        #1e2d4a;
+  --navy-mid:    #2a3d60;
+  --navy-soft:   #3a5080;
+  --gold:        #a07840;
+  --gold-light:  #b89050;
+  --gold-pale:   #f5e8cc;
+  --slate:       #3c4a5a;
+  --slate-mid:   #647080;
+  --slate-soft:  #98a8b8;
+  --border:      rgba(30,45,74,0.1);
+  --border-blush:rgba(200,120,90,0.2);
+  --shadow-sm:   0 1px 8px rgba(30,45,74,0.06);
+  --shadow-md:   0 4px 24px rgba(30,45,74,0.1);
+  --shadow-lg:   0 8px 48px rgba(30,45,74,0.12);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:18px;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--white);
+  color:var(--slate);
+  overflow-x:hidden;
+  line-height:1.7;
+}
+
+/* ══════════════════════════════
+   NAVIGATION
+   ══════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow-sm);
+}
+.nav-inner{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;height:72px;
+}
+.nav-brand{text-decoration:none;}
+.nav-brand-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;font-weight:500;color:var(--navy);
+  line-height:1;
+}
+.nav-brand-tag{
+  font-size:.72rem;color:var(--blush-deep);
+  letter-spacing:.08em;display:block;margin-top:2px;
+}
+.nav-links{display:flex;gap:0;list-style:none;}
+.nav-links a{
+  color:var(--slate);text-decoration:none;
+  font-size:1rem;font-weight:400;
+  padding:.5rem 1rem;
+  transition:color .2s;display:block;
+}
+.nav-links a:hover{color:var(--blush-deep);}
+.nav-right{display:flex;align-items:center;gap:.75rem;}
+.nav-phone{
+  font-size:.95rem;font-weight:600;color:var(--navy);
+  text-decoration:none;letter-spacing:.02em;
+}
+.btn-book{
+  background:var(--blush-deep);color:var(--white);
+  border:none;padding:.65rem 1.5rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.9rem;font-weight:600;
+  cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;gap:.4rem;
+  border-radius:2px;
+  transition:background .25s,transform .2s,box-shadow .2s;
+  box-shadow:0 2px 12px rgba(196,120,90,0.3);
+}
+.btn-book:hover{background:var(--rose);transform:translateY(-1px);box-shadow:0 4px 18px rgba(196,120,90,0.4);}
+.btn-outline{
+  background:transparent;color:var(--navy);
+  border:1.5px solid var(--border);padding:.63rem 1.25rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.9rem;font-weight:500;
+  cursor:pointer;text-decoration:none;
+  display:inline-flex;align-items:center;
+  border-radius:2px;
+  transition:border-color .2s,color .2s;
+}
+.btn-outline:hover{border-color:var(--navy);color:var(--navy);}
+
+/* ══════════════════════════════
+   HERO CAROUSEL
+   ══════════════════════════════ */
+.hero{
+  position:relative;
+  height:100vh;min-height:650px;
+  overflow:hidden;
+  padding-top:72px;
+}
+.hero-slides{
+  display:flex;width:100%;height:100%;
+  transition:transform .85s cubic-bezier(.76,0,.24,1);
+  align-items:flex-start;
+}
+.hero-slide{
+  min-width:100%;height:100%;
+  display:grid;grid-template-columns:1fr 1fr;
+  flex-shrink:0;position:relative;
+  overflow:hidden;
+}
+
+/* Slide bg — warm gradient per condition */
+.hero-slide[data-s="1"] .s-bg{background:linear-gradient(135deg,#fdf0eb 0%,#f8e4da 40%,#fdf9f7 100%);}
+.hero-slide[data-s="2"] .s-bg{background:linear-gradient(135deg,#eef4f0 0%,#ddeee6 40%,#f5faf7 100%);}
+.hero-slide[data-s="3"] .s-bg{background:linear-gradient(135deg,#f5ece4 0%,#e8d8cc 40%,#fdf9f7 100%);}
+.hero-slide[data-s="4"] .s-bg{background:linear-gradient(135deg,#edf2f8 0%,#dce8f4 40%,#f5f8fd 100%);}
+.hero-slide[data-s="5"] .s-bg{background:linear-gradient(135deg,#f8ede4 0%,#eeddd0 40%,#fdf9f7 100%);}
+.hero-slide[data-s="6"] .s-bg{background:linear-gradient(135deg,#f0edf8 0%,#e4ddf0 40%,#f8f5fd 100%);}
+
+.s-bg{position:absolute;inset:0;}
+.s-bg::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 60% at 80% 50%,rgba(255,255,255,0.6) 0%,transparent 70%);
+}
+
+/* Condition pill top of slide */
+.hero-slide[data-s="1"]{--c:#c4785a;--cp:rgba(196,120,90,0.1);}
+.hero-slide[data-s="2"]{--c:#4a8870;--cp:rgba(74,136,112,0.1);}
+.hero-slide[data-s="3"]{--c:#8a6040;--cp:rgba(138,96,64,0.1);}
+.hero-slide[data-s="4"]{--c:#3a5a8a;--cp:rgba(58,90,138,0.1);}
+.hero-slide[data-s="5"]{--c:#b07840;--cp:rgba(176,120,64,0.1);}
+.hero-slide[data-s="6"]{--c:#6a4a8a;--cp:rgba(106,74,138,0.1);}
+
+/* Left content */
+.s-left{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:2rem 3rem 4rem 4rem;
+  max-width:640px;
+}
+
+.s-pill{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--cp);border:1px solid rgba(0,0,0,0.08);
+  padding:.3rem .85rem;border-radius:100px;
+  font-size:.72rem;font-weight:600;color:var(--c);
+  letter-spacing:.05em;text-transform:uppercase;
+  margin-bottom:1.5rem;width:fit-content;
+  opacity:0;transform:translateY(12px);
+  transition:opacity .5s .08s,transform .5s .08s;
+}
+.s-pill::before{content:'';width:6px;height:6px;background:var(--c);border-radius:50%;}
+
+.s-problem{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,3.5vw,3.6rem);
+  font-weight:400;line-height:1.1;
+  color:var(--navy);margin-bottom:1rem;
+  opacity:0;transform:translateY(16px);
+  transition:opacity .5s .18s,transform .5s .18s;
+}
+.s-problem em{font-style:italic;color:var(--c);}
+
+.s-empathy{
+  font-size:1.05rem;color:var(--slate-mid);
+  line-height:1.75;max-width:420px;
+  margin-bottom:2rem;
+  opacity:0;transform:translateY(12px);
+  transition:opacity .5s .28s,transform .5s .28s;
+}
+
+.s-plan{
+  display:flex;flex-direction:column;gap:.5rem;
+  margin-bottom:2.25rem;
+  opacity:0;transform:translateY(12px);
+  transition:opacity .5s .36s,transform .5s .36s;
+}
+.p-step{
+  display:flex;align-items:flex-start;gap:.75rem;
+  padding:.65rem .85rem;
+  background:rgba(255,255,255,0.7);
+  border:1px solid rgba(255,255,255,0.9);
+  border-radius:3px;
+  backdrop-filter:blur(4px);
+}
+.p-num{
+  font-family:'DM Mono',monospace;font-size:.7rem;
+  font-weight:500;color:var(--c);
+  background:var(--cp);
+  width:20px;height:20px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:1px;
+}
+.p-txt{font-size:1rem;color:var(--slate);line-height:1.5;}
+.p-txt strong{color:var(--navy);font-weight:600;}
+
+.s-actions{
+  display:flex;gap:.75rem;flex-wrap:wrap;
+  opacity:0;transform:translateY(10px);
+  transition:opacity .5s .44s,transform .5s .44s;
+}
+
+/* Animate in */
+.hero-slide.active .s-pill,
+.hero-slide.active .s-problem,
+.hero-slide.active .s-empathy,
+.hero-slide.active .s-plan,
+.hero-slide.active .s-actions{opacity:1;transform:translateY(0);}
+
+/* Right panel */
+.s-right{
+  position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:center;
+  padding:2rem 4rem 4rem 2rem;
+}
+.s-card{
+  width:100%;max-width:380px;
+  background:var(--white);
+  border-radius:4px;
+  box-shadow:var(--shadow-lg);
+  overflow:hidden;
+  opacity:0;transform:scale(0.96) translateY(16px);
+  transition:opacity .6s .3s,transform .6s .3s;
+}
+.hero-slide.active .s-card{opacity:1;transform:scale(1) translateY(0);}
+
+.s-card-top{
+  position:relative;
+  background:var(--cp);
+  padding:1.4rem 1.4rem 0;
+  border-bottom:3px solid var(--c);
+}
+.s-card-label{
+  font-size:.65rem;font-weight:600;color:var(--c);
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:.35rem;
+}
+.s-card-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;color:var(--navy);margin-bottom:1rem;
+}
+
+/* Image slot */
+.s-img{
+  width:100%;aspect-ratio:3/2;
+  background:linear-gradient(155deg,var(--cream) 0%,var(--blush-pale) 100%);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:.6rem;
+  position:relative;overflow:hidden;
+}
+.s-img-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:18px 18px;opacity:.5;
+}
+.s-img-content{position:relative;z-index:1;text-align:center;}
+.s-img-icon{font-size:2rem;display:block;margin-bottom:.4rem;opacity:.35;}
+.s-img-lbl{font-size:.65rem;color:var(--slate-soft);letter-spacing:.08em;}
+.s-img-lbl span{display:block;color:var(--c);font-weight:600;margin-bottom:.15rem;}
+
+.s-card-stats{
+  display:grid;grid-template-columns:1fr 1fr;
+}
+.s-stat{
+  padding:.9rem 1.1rem;
+  border-top:1px solid var(--border);
+}
+.s-stat:first-child{border-right:1px solid var(--border);}
+.s-stat-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;color:var(--c);line-height:1;font-weight:500;
+}
+.s-stat-l{font-size:.78rem;color:var(--slate-soft);margin-top:.15rem;font-weight:400;}
+
+/* Controls */
+.hero-nav{
+  position:absolute;bottom:2.5rem;left:4rem;
+  z-index:20;display:flex;align-items:center;gap:1rem;
+}
+.h-dots{display:flex;gap:.4rem;align-items:center;}
+.h-dot{
+  width:8px;height:8px;border-radius:4px;
+  background:rgba(30,45,74,0.2);
+  border:none;cursor:pointer;padding:0;
+  transition:background .3s,width .35s;
+}
+.h-dot.on{background:var(--blush-deep);width:26px;}
+.h-arrows{display:flex;gap:.3rem;}
+.h-arr{
+  width:38px;height:38px;border-radius:50%;
+  border:1.5px solid var(--border);
+  background:var(--white);
+  color:var(--slate);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;font-size:.8rem;
+  box-shadow:var(--shadow-sm);
+  transition:border-color .2s,color .2s,transform .2s;
+}
+.h-arr:hover{border-color:var(--blush-deep);color:var(--blush-deep);transform:scale(1.08);}
+
+.hero-counter{
+  position:absolute;bottom:2.65rem;right:4rem;
+  z-index:20;font-family:'DM Mono',monospace;
+  font-size:.75rem;letter-spacing:.1em;color:var(--slate-soft);
+}
+.hero-counter b{color:var(--navy);font-weight:500;}
+
+.hero-progress{
+  position:absolute;bottom:0;left:0;right:0;
+  height:3px;background:var(--cream);z-index:20;
+}
+.hero-bar{height:100%;background:var(--blush-deep);width:0%;transition:width linear;}
+
+/* ══════════════════════════════
+   STATS STRIP  — like Clear Skin's
+   "Trusted By 100,000+ Patients"
+   ══════════════════════════════ */
+.stats-strip{
+  background:var(--navy);
+  padding:0 4rem;
+}
+.stats-inner{
+  max-width:1280px;margin:0 auto;
+  display:flex;align-items:stretch;
+}
+.stat-item{
+  flex:1;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:1.6rem 1rem;
+  border-right:1px solid rgba(255,255,255,0.08);
+  text-align:center;
+}
+.stat-item:last-child{border-right:none;}
+.stat-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:500;color:var(--blush-light);
+  line-height:1;
+}
+.stat-label{
+  font-size:.95rem;color:rgba(255,255,255,0.55);
+  margin-top:.3rem;font-weight:400;
+  letter-spacing:.04em;
+}
+
+/* ══════════════════════════════
+   PATIENT VOICE
+   ══════════════════════════════ */
+.pvb{
+  background:var(--blush-pale);
+  border-top:1px solid var(--border-blush);
+  border-bottom:1px solid var(--border-blush);
+  padding:2rem 4rem;
+}
+.pvb-inner{
+  max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto 1fr auto 1fr;
+  gap:2rem;align-items:center;
+}
+.pvb-div{width:1px;height:2.5rem;background:var(--border-blush);}
+.pvb-q{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-style:italic;
+  color:var(--slate);line-height:1.7;
+}
+.pvb-a{
+  font-size:.8rem;color:var(--blush-deep);
+  font-weight:500;margin-top:.4rem;letter-spacing:.04em;
+}
+
+/* ══════════════════════════════
+   SECTION BASE
+   ══════════════════════════════ */
+section{padding:5rem 4rem;}
+.si{max-width:1280px;margin:0 auto;}
+
+.eyebrow{
+  font-size:.82rem;font-weight:600;
+  color:var(--blush-deep);letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:.75rem;
+  display:flex;align-items:center;gap:.6rem;
+}
+.eyebrow::before{
+  content:'';display:block;
+  width:24px;height:2px;background:var(--blush-deep);
+  border-radius:2px;
+}
+.stitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2rem,3.2vw,3.2rem);
+  font-weight:400;line-height:1.12;
+  color:var(--navy);margin-bottom:.9rem;
+}
+.stitle em{font-style:italic;color:var(--blush-deep);}
+.stitle strong{font-weight:600;}
+.ssub{font-size:1.05rem;color:var(--slate-mid);max-width:560px;line-height:1.8;}
+
+/* ══════════════════════════════
+   ABOUT
+   ══════════════════════════════ */
+.about{background:var(--off-white);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.about-lead{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.75rem;font-weight:300;line-height:1.45;
+  color:var(--navy);margin:1.25rem 0 1.5rem;
+}
+.about-lead em{font-style:italic;color:var(--blush-deep);}
+.about-p{font-size:1.05rem;color:var(--slate-mid);line-height:1.85;margin-bottom:1rem;}
+
+.cred-grid{display:flex;flex-direction:column;gap:.75rem;}
+.cred-item{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:1.1rem 1.25rem;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:4px;box-shadow:var(--shadow-sm);
+  transition:border-color .25s,box-shadow .25s,transform .25s;
+}
+.cred-item:hover{
+  border-color:var(--border-blush);
+  box-shadow:var(--shadow-md);
+  transform:translateX(4px);
+}
+.cred-icon{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--blush-pale);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;flex-shrink:0;
+  border:1px solid var(--border-blush);
+}
+.cred-label{font-size:.75rem;font-weight:600;color:var(--blush-deep);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.2rem;}
+.cred-val{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--navy);font-weight:400;}
+.cred-sub{font-size:.85rem;color:var(--slate-soft);margin-top:.1rem;}
+
+/* ══════════════════════════════
+   TREATMENTS — tab-style like Clear Skin
+   ══════════════════════════════ */
+.treatments{background:var(--white);}
+.tr-tabs{
+  display:flex;gap:0;
+  border-bottom:2px solid var(--border);
+  margin:2rem 0 0;overflow-x:auto;
+  scrollbar-width:none;
+}
+.tr-tabs::-webkit-scrollbar{display:none;}
+.tr-tab{
+  padding:.75rem 1.5rem;
+  font-size:.95rem;font-weight:500;
+  color:var(--slate-mid);cursor:pointer;
+  border:none;background:none;
+  border-bottom:2px solid transparent;
+  margin-bottom:-2px;white-space:nowrap;
+  transition:color .2s,border-color .2s;
+}
+.tr-tab:hover{color:var(--blush-deep);}
+.tr-tab.on{color:var(--blush-deep);border-bottom-color:var(--blush-deep);font-weight:600;}
+
+.tr-panels{margin-top:0;}
+.tr-panel{display:none;padding:2.5rem 0;}
+.tr-panel.on{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+
+.tr-content{}
+.tr-outcome{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;font-style:italic;
+  color:var(--blush-deep);margin-bottom:.5rem;
+}
+.tr-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:400;color:var(--navy);
+  margin-bottom:1rem;line-height:1.15;
+}
+.tr-desc{font-size:1.05rem;color:var(--slate-mid);line-height:1.85;margin-bottom:1.5rem;}
+.tr-steps{display:flex;flex-direction:column;gap:.6rem;margin-bottom:2rem;}
+.tr-step{
+  display:flex;align-items:flex-start;gap:.75rem;
+  padding:.7rem .9rem;
+  background:var(--off-white);border-radius:3px;
+  border-left:3px solid var(--blush-deep);
+}
+.tr-step-num{
+  font-family:'DM Mono',monospace;font-size:.72rem;
+  font-weight:600;color:var(--blush-deep);flex-shrink:0;margin-top:2px;
+}
+.tr-step-txt{font-size:1rem;color:var(--slate);line-height:1.5;}
+.tr-step-txt strong{color:var(--navy);font-weight:600;}
+.tr-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+.tr-tag{
+  font-size:.82rem;font-weight:500;
+  color:var(--navy);background:var(--cream);
+  border:1px solid var(--border);
+  padding:.25rem .7rem;border-radius:100px;
+}
+
+.tr-visual{}
+.tr-img-ph{
+  width:100%;aspect-ratio:4/3;
+  background:linear-gradient(155deg,var(--cream) 0%,var(--blush-pale) 100%);
+  border-radius:4px;border:1px solid var(--border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.75rem;position:relative;overflow:hidden;
+}
+.tr-img-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:20px 20px;opacity:.5;
+}
+.tr-img-lbl{
+  position:relative;z-index:1;text-align:center;
+  font-size:.68rem;color:var(--slate-soft);letter-spacing:.07em;
+}
+.tr-img-lbl span{display:block;color:var(--blush-deep);font-weight:600;margin-bottom:.2rem;}
+.tr-img-icon{font-size:2rem;opacity:.25;position:relative;z-index:1;}
+
+.tr-cta-row{
+  display:flex;gap:.75rem;margin-top:2rem;
+}
+
+/* ══════════════════════════════
+   HONEST FILTER
+   ══════════════════════════════ */
+.rfy{background:var(--navy);}
+.rfy .eyebrow{color:var(--blush-light);}
+.rfy .eyebrow::before{background:var(--blush-light);}
+.rfy .stitle{color:var(--white);}
+.rfy .stitle em{color:var(--blush-light);}
+.rfy .ssub{color:rgba(255,255,255,.5);}
+.rfy-grid{display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:start;margin-top:3rem;}
+.rfy-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+.rfy-col{
+  padding:1.75rem;border-radius:4px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.rfy-col.yes{
+  border-color:rgba(232,180,160,0.3);
+  background:rgba(232,180,160,0.06);
+}
+.rfy-badge{
+  font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:.28rem .8rem;border-radius:100px;display:inline-block;margin-bottom:1.25rem;
+}
+.rfy-badge.yes{background:rgba(232,180,160,0.2);color:var(--blush-light);border:1px solid rgba(232,180,160,0.3);}
+.rfy-badge.no{background:rgba(255,255,255,.05);color:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.1);}
+.rfy-item{display:flex;gap:.7rem;margin-bottom:.85rem;align-items:flex-start;}
+.rfy-ico.yes{color:var(--blush-light);font-weight:700;flex-shrink:0;margin-top:.1rem;}
+.rfy-ico.no{color:rgba(255,255,255,.25);font-weight:700;flex-shrink:0;margin-top:.1rem;}
+.rfy-item span:last-child{font-size:1.05rem;color:rgba(255,255,255,.52);line-height:1.6;}
+
+/* ══════════════════════════════
+   TECHNOLOGY
+   ══════════════════════════════ */
+.tech{background:var(--off-white);}
+.tech-intro{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:5rem;align-items:center;margin-bottom:3rem;
+}
+.tech-note{
+  padding:1.1rem 1.4rem;
+  background:var(--white);
+  border-radius:4px;border-left:3px solid var(--blush-deep);
+  box-shadow:var(--shadow-sm);
+}
+.tech-note p{font-size:1rem;color:var(--slate-mid);line-height:1.7;}
+.tech-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.25rem;
+}
+.tech-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:4px;padding:1.5rem;
+  transition:border-color .25s,transform .25s,box-shadow .25s;
+}
+.tech-card:hover{
+  border-color:var(--border-blush);
+  transform:translateY(-4px);
+  box-shadow:var(--shadow-md);
+}
+.tech-badge{
+  font-size:.78rem;font-weight:600;letter-spacing:.08em;
+  color:var(--white);background:var(--navy);
+  padding:.2rem .65rem;border-radius:100px;
+  display:inline-block;margin-bottom:.9rem;
+  text-transform:uppercase;
+}
+.tech-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--navy);margin-bottom:.25rem;}
+.tech-type{font-size:.88rem;font-weight:600;color:var(--blush-deep);letter-spacing:.07em;text-transform:uppercase;margin-bottom:.65rem;}
+.tech-desc{font-size:1rem;color:var(--slate-mid);line-height:1.7;}
+
+/* ══════════════════════════════
+   RESULTS
+   ══════════════════════════════ */
+.results{background:var(--white);}
+.res-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:2.5rem;
+}
+.res-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1.25rem;
+}
+.res-card{
+  background:var(--off-white);border:1px solid var(--border);
+  border-radius:4px;overflow:hidden;
+  transition:box-shadow .25s,transform .25s;
+}
+.res-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.res-imgs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+.res-slot{
+  background:var(--cream);aspect-ratio:3/4;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.35rem;
+  font-size:.72rem;color:var(--slate-soft);
+  letter-spacing:.06em;font-weight:500;
+}
+.res-slot svg{opacity:.3;}
+.res-meta{padding:.85rem 1rem;background:var(--white);}
+.res-cond{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--navy);}
+.res-detail{font-size:.82rem;font-weight:500;color:var(--blush-deep);letter-spacing:.05em;margin-top:.15rem;}
+.res-note{
+  margin-top:2rem;padding:1rem 1.4rem;
+  background:var(--blush-pale);
+  border-radius:4px;border-left:3px solid var(--blush-deep);
+}
+.res-note p{font-size:.95rem;color:var(--slate-mid);line-height:1.6;}
+
+/* ══════════════════════════════
+   TESTIMONIALS
+   ══════════════════════════════ */
+.testimonials{background:var(--cream);}
+.test-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1.25rem;margin-top:2.5rem;
+}
+.test-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:4px;padding:2rem;
+  transition:box-shadow .25s,border-color .25s;
+}
+.test-card:hover{box-shadow:var(--shadow-md);border-color:var(--border-blush);}
+.test-mark{
+  font-family:'Georgia',serif;font-size:3.5rem;
+  color:var(--blush-deep);opacity:.25;
+  line-height:.6;margin-bottom:1rem;display:block;
+}
+.test-txt{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-style:italic;
+  color:var(--slate);line-height:1.85;margin-bottom:1.5rem;
+  font-weight:300;
+}
+.test-sep{
+  height:1px;background:var(--border);margin-bottom:1rem;
+}
+.test-meta{display:flex;align-items:center;gap:.85rem;}
+.test-av{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--blush-pale);border:1.5px solid var(--border-blush);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;
+  font-size:.9rem;color:var(--blush-deep);flex-shrink:0;
+}
+.test-name{font-size:1rem;font-weight:600;color:var(--navy);}
+.test-cond{font-size:.82rem;color:var(--blush-deep);font-weight:500;margin-top:.1rem;}
+
+/* ══════════════════════════════
+   WHY CHOOSE
+   ══════════════════════════════ */
+.why{background:var(--white);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:2.5rem;}
+.diff-list{display:flex;flex-direction:column;gap:0;}
+.diff{
+  display:flex;gap:1.25rem;padding:1.5rem 0;
+  border-bottom:1px solid var(--border);
+}
+.diff:first-child{border-top:1px solid var(--border);}
+.diff-ico{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--blush-pale);border:1px solid var(--border-blush);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;flex-shrink:0;margin-top:.1rem;
+}
+.diff-ttl{font-size:1.1rem;font-weight:600;color:var(--navy);margin-bottom:.3rem;}
+.diff-b{font-size:1.05rem;color:var(--slate-mid);line-height:1.7;}
+
+.consult-card{
+  background:var(--navy);border-radius:4px;
+  padding:2.25rem;position:relative;overflow:hidden;
+}
+.consult-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--blush-deep),var(--blush-light),var(--blush-deep));
+}
+.consult-ttl{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;font-weight:400;color:var(--white);margin-bottom:1.5rem;
+}
+.c-pt{display:flex;gap:.8rem;margin-bottom:.85rem;align-items:flex-start;}
+.c-check{
+  width:18px;height:18px;border-radius:50%;
+  background:rgba(232,180,160,0.2);border:1.5px solid var(--blush-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.55rem;color:var(--blush-light);flex-shrink:0;margin-top:.15rem;
+  font-weight:700;
+}
+.c-txt{font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.55;}
+.c-cta-row{
+  display:flex;flex-direction:column;gap:.65rem;
+  margin-top:2rem;padding-top:1.5rem;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.btn-book-inv{
+  background:var(--blush-deep);color:var(--white);
+  border:none;padding:.72rem 1.5rem;
+  font-family:'DM Sans',sans-serif;
+  font-size:.95rem;font-weight:600;
+  cursor:pointer;text-decoration:none;
+  display:flex;align-items:center;justify-content:center;gap:.4rem;
+  border-radius:2px;
+  transition:background .25s;
+}
+.btn-book-inv:hover{background:var(--rose);}
+.btn-wa{
+  background:rgba(37,211,102,.1);border:1px solid rgba(37,211,102,.28);
+  color:#1da851;padding:.68rem 1.5rem;
+  font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:500;
+  cursor:pointer;text-decoration:none;
+  display:flex;align-items:center;justify-content:center;gap:.45rem;
+  border-radius:2px;transition:background .25s;
+}
+.btn-wa:hover{background:rgba(37,211,102,.18);}
+.btn-ghost-inv{
+  background:transparent;color:rgba(255,255,255,.55);
+  border:1px solid rgba(255,255,255,.15);padding:.68rem 1.5rem;
+  font-family:'DM Sans',sans-serif;font-size:.95rem;
+  cursor:pointer;text-decoration:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:2px;transition:border-color .25s,color .25s;
+}
+.btn-ghost-inv:hover{border-color:rgba(255,255,255,.35);color:var(--white);}
+
+/* ══════════════════════════════
+   CONTACT
+   ══════════════════════════════ */
+.contact{background:var(--off-white);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:2.5rem;}
+
+.clinic-img-ph{
+  width:100%;aspect-ratio:16/9;
+  background:var(--cream);border-radius:4px;
+  border:1px dashed var(--border-blush);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.5rem;position:relative;overflow:hidden;
+}
+.clinic-img-ph::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:20px 20px;opacity:.6;
+}
+.cip-inner{position:relative;z-index:1;text-align:center;}
+.cip-icon{font-size:1.5rem;opacity:.3;display:block;margin-bottom:.4rem;}
+.cip-lbl{font-size:.7rem;font-weight:600;color:var(--blush-deep);letter-spacing:.08em;text-transform:uppercase;}
+.cip-sub{font-size:.7rem;color:var(--slate-soft);margin-top:.2rem;}
+
+.cd-list{display:flex;flex-direction:column;gap:.1rem;}
+.cd{
+  display:flex;gap:.85rem;padding:1rem 0;
+  border-bottom:1px solid var(--border);align-items:flex-start;
+}
+.cd:first-child{border-top:1px solid var(--border);}
+.cd-icon{
+  width:32px;height:32px;border-radius:50%;
+  background:var(--blush-pale);border:1px solid var(--border-blush);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.78rem;flex-shrink:0;
+}
+.cd-lbl{font-size:.78rem;font-weight:600;color:var(--blush-deep);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.2rem;}
+.cd-val{font-size:1.05rem;color:var(--slate);line-height:1.5;}
+.cd-val a{color:var(--navy);text-decoration:none;font-weight:500;transition:color .2s;}
+.cd-val a:hover{color:var(--blush-deep);}
+
+.map-wrap{margin-bottom:1.4rem;}
+.map-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:.65rem;}
+.map-lbl{font-size:.65rem;font-weight:600;color:var(--navy);letter-spacing:.06em;text-transform:uppercase;}
+.map-dir{font-size:.72rem;font-weight:500;color:var(--blush-deep);text-decoration:none;transition:color .2s;}
+.map-dir:hover{color:var(--rose);}
+.map-ph{
+  width:100%;height:240px;
+  background:var(--cream);border-radius:4px;
+  border:1px solid var(--border);
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+}
+.map-lines{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--border) 1px,transparent 1px),
+    linear-gradient(90deg,var(--border) 1px,transparent 1px);
+  background-size:26px 26px;
+}
+.map-content{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.5rem;}
+.map-pin-wrap{position:relative;width:24px;height:24px;margin-bottom:.25rem;}
+.map-dot{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:8px;height:8px;background:var(--blush-deep);border-radius:50%;}
+.map-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:24px;height:24px;border:2px solid var(--blush-deep);border-radius:50%;animation:pulse 2s ease-out infinite;}
+@keyframes pulse{0%{transform:translate(-50%,-50%) scale(.5);opacity:1;}100%{transform:translate(-50%,-50%) scale(2);opacity:0;}}
+.map-clinic-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--navy);}
+.map-addr{font-size:.95rem;color:var(--slate-mid);line-height:1.5;}
+.map-open{
+  margin-top:.35rem;font-size:.72rem;font-weight:500;
+  color:var(--blush-deep);text-decoration:none;
+  border:1.5px solid var(--border-blush);padding:.3rem .85rem;
+  border-radius:2px;background:var(--white);
+  transition:background .2s;
+}
+.map-open:hover{background:var(--blush-pale);}
+.map-wrap iframe{width:100%;height:240px;border:1px solid var(--border);border-radius:4px;display:block;}
+
+.book-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:4px;padding:2rem;
+  box-shadow:var(--shadow-sm);
+}
+.book-ttl{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--navy);margin-bottom:.6rem;}
+.book-body{font-size:1.05rem;color:var(--slate-mid);line-height:1.75;margin-bottom:1.75rem;}
+.book-actions{display:flex;flex-direction:column;gap:.65rem;}
+
+/* ══════════════════════════════
+   FOOTER
+   ══════════════════════════════ */
+footer{
+  background:var(--navy);
+  padding:1.75rem 4rem;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.f-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;color:rgba(255,255,255,.5);
+}
+.f-reg{font-size:.62rem;color:rgba(255,255,255,.28);letter-spacing:.06em;margin-top:.2rem;}
+.f-disc{font-size:.62rem;color:rgba(255,255,255,.2);text-align:right;max-width:400px;line-height:1.5;}
+
+/* ══════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════ */
+/* ── TABLET ── */
+@media(max-width:1100px){
+  nav .nav-links{display:none;}
+  .nav-inner{padding:0 1.5rem;}
+  section{padding:3.5rem 1.5rem;}
+  .pvb,.stats-strip,.rfy{padding-left:1.5rem;padding-right:1.5rem;}
+
+  /* Hero: auto height, stacked layout */
+  .hero{height:auto;min-height:unset;padding-bottom:5rem;}
+  .hero-slides{height:auto;}
+  .hero-slide{grid-template-columns:1fr;grid-template-rows:auto auto;height:auto;}
+  .s-left{padding:6rem 1.5rem 1.5rem;justify-content:flex-start;}
+
+  /* Show image card below text */
+  .s-right{display:flex;padding:0 1.5rem 4rem;justify-content:flex-start;}
+  .s-card{max-width:100%;}
+
+  /* Treatments: stack text then image */
+  .tr-panel.on{grid-template-columns:1fr;}
+  .tr-visual{display:block;margin-top:1.5rem;}
+  .tr-img-ph{aspect-ratio:16/9;}
+
+  .about-grid,.why-grid,.contact-grid,.tech-intro{grid-template-columns:1fr;gap:2.5rem;}
+  .tech-grid{grid-template-columns:repeat(2,1fr);}
+  .res-grid{grid-template-columns:repeat(2,1fr);}
+  .test-grid{grid-template-columns:1fr;}
+  .rfy-grid{grid-template-columns:1fr;gap:2rem;}
+  .rfy-cols{grid-template-columns:1fr 1fr;}
+  .stats-inner{flex-wrap:wrap;}
+  .stat-item{min-width:50%;border-top:1px solid rgba(255,255,255,.08);}
+  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem;}
+  .f-disc{text-align:center;}
+  .hero-nav{left:1.5rem;bottom:1.5rem;}
+  .hero-counter{right:1.5rem;bottom:1.6rem;}
+}
+
+/* ── MOBILE ── */
+@media(max-width:640px){
+  .nav-inner{padding:0 1rem;}
+  .nav-phone{display:none;}
+  section{padding:2.5rem 1rem;}
+  .pvb,.stats-strip,.rfy{padding-left:1rem;padding-right:1rem;}
+
+  /* Hero */
+  .hero{padding-bottom:4.5rem;}
+  .s-left{padding:5.5rem 1rem 1.25rem;}
+  .s-problem{font-size:1.9rem;line-height:1.12;}
+  .s-empathy{font-size:1rem;}
+  .s-pill{font-size:.75rem;padding:.28rem .8rem;}
+  .s-right{padding:0 1rem 3.5rem;}
+  .s-img{aspect-ratio:16/9;}
+  .p-step{padding:.5rem .7rem;}
+  .p-txt{font-size:.92rem;}
+  .s-actions{gap:.5rem;}
+  .s-actions .btn-book,.s-actions .btn-outline{font-size:.7rem;padding:.55rem 1rem;}
+
+  /* Treatment tabs */
+  .tr-tab{padding:.6rem .85rem;font-size:.72rem;}
+  .tr-panel{padding:1.5rem 0;}
+  .tr-img-ph{aspect-ratio:4/3;}
+  .tr-name{font-size:1.6rem;}
+
+  /* Stats */
+  .stats-inner{flex-direction:column;}
+  .stat-item{min-width:100%;border-right:none;border-top:1px solid rgba(255,255,255,.08);}
+  .stat-item:first-child{border-top:none;}
+  .stat-num{font-size:1.5rem;}
+
+  /* Patient voice */
+  .pvb-inner{grid-template-columns:1fr;gap:1.25rem;}
+  .pvb-div{display:none;}
+
+  /* Results */
+  .tech-grid{grid-template-columns:1fr;}
+  .res-grid{grid-template-columns:1fr 1fr;}
+
+  /* RFY */
+  .rfy-cols{grid-template-columns:1fr;}
+
+  /* Why */
+  .consult-card{padding:1.5rem;}
+
+  /* Contact */
+  .book-card{padding:1.5rem;}
+
+  /* Hero controls */
+  .hero-nav{left:1rem;bottom:1.25rem;}
+  .hero-counter{right:1rem;bottom:1.35rem;}
+  .h-arr{width:32px;height:32px;font-size:.7rem;}
+  .h-dot{width:6px;height:6px;}
+  .h-dot.on{width:18px;}
+
+  /* Footer */
+  footer{padding:1.25rem 1rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">
+      <div class="nav-brand-name">Dr. Alam's Skin Clinic</div>
+      <span class="nav-brand-tag">Expert care for every skin · Erode</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#technology">Technology</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:+919345410038">+91 93454 10038</a>
+      <a class="btn-outline" href="https://wa.me/919345410038" target="_blank">WhatsApp</a>
+      <a class="btn-book" href="#contact">Book Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO CAROUSEL -->
+<section class="hero" id="home">
+  <div class="hero-slides" id="heroSlides">
+
+    <!-- SLIDE 1 — Acne -->
+    <div class="hero-slide active" data-s="1">
+      <div class="s-bg"></div>
+      <div class="s-left">
+        <div class="s-pill">Condition 01</div>
+        <h1 class="s-problem">You've been treating<br>the symptom.<br><em>Not the cause.</em></h1>
+        <p class="s-empathy">If your acne keeps coming back despite creams and facials, the treatment is wrong — not your skin. Most patients who come here have already spent money elsewhere with no lasting result. It starts with finding out exactly why your acne is happening.</p>
+        <div class="s-plan">
+          <div class="p-step"><div class="p-num">1</div><div class="p-txt"><strong>Find out what type of acne you have.</strong> Not all acne is the same — the treatment depends on the type.</div></div>
+          <div class="p-step"><div class="p-num">2</div><div class="p-txt"><strong>Stop the breakouts first.</strong> Tablets and creams prescribed specifically for your skin, not a general formula.</div></div>
+          <div class="p-step"><div class="p-num">3</div><div class="p-txt"><strong>Then treat the marks and scars.</strong> Once breakouts are controlled, the right laser is chosen for your scar type.</div></div>
+        </div>
+        <div class="s-actions">
+          <a href="#contact" class="btn-book">Book Consultation</a>
+          <a href="https://wa.me/919345410038" class="btn-outline" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="s-card">
+          <div class="s-card-top">
+            <div class="s-card-label">Acne &amp; Acne Scars</div>
+            <div class="s-card-title">Stop breaking out.<br>Fade what's left.</div>
+          </div>
+          <div class="s-img">
+            <div class="s-img-grid"></div>
+            <div class="s-img-content">
+              <span class="s-img-icon">◎</span>
+              <div class="s-img-lbl"><span>Before / After</span>Place result image here</div>
+            </div>
+          </div>
+          <div class="s-card-stats">
+            <div class="s-stat"><div class="s-stat-n">CO₂</div><div class="s-stat-l">Youlaser MT</div></div>
+            <div class="s-stat"><div class="s-stat-n">MNRF</div><div class="s-stat-l">Vacuum RF</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 — Pigmentation -->
+    <div class="hero-slide" data-s="2">
+      <div class="s-bg"></div>
+      <div class="s-left">
+        <div class="s-pill">Condition 02</div>
+        <h1 class="s-problem">Brightening creams<br>treat none of<br><em>this correctly.</em></h1>
+        <p class="s-empathy">Dark patches on your face can have different causes — and each cause needs a different treatment. Using the wrong laser on the wrong type of pigmentation can make it worse. The first step is finding out exactly what you have.</p>
+        <div class="s-plan">
+          <div class="p-step"><div class="p-num">1</div><div class="p-txt"><strong>Find out what type of darkening you have.</strong> Melasma, dark marks from acne, sun spots — all look similar but are treated differently.</div></div>
+          <div class="p-step"><div class="p-num">2</div><div class="p-txt"><strong>Get the right treatment for your type.</strong> Whether it's a laser, a peel, or a cream — chosen after examining your skin, not guessed.</div></div>
+          <div class="p-step"><div class="p-num">3</div><div class="p-txt"><strong>Keep it from coming back.</strong> You'll be told exactly what to use daily and what to avoid so the results last.</div></div>
+        </div>
+        <div class="s-actions">
+          <a href="#contact" class="btn-book">Book Consultation</a>
+          <a href="https://wa.me/919345410038" class="btn-outline" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="s-card">
+          <div class="s-card-top"><div class="s-card-label">Pigmentation &amp; Melasma</div><div class="s-card-title">Even skin tone.<br>Not just brightening.</div></div>
+          <div class="s-img"><div class="s-img-grid"></div><div class="s-img-content"><span class="s-img-icon">◈</span><div class="s-img-lbl"><span>Before / After</span>Place result image here</div></div></div>
+          <div class="s-card-stats"><div class="s-stat"><div class="s-stat-n">Pico</div><div class="s-stat-l">Q-Plus A Evo</div></div><div class="s-stat"><div class="s-stat-n">IPL</div><div class="s-stat-l">Light B Evo</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 — Hair Loss -->
+    <div class="hero-slide" data-s="3">
+      <div class="s-bg"></div>
+      <div class="s-left">
+        <div class="s-pill">Condition 03</div>
+        <h1 class="s-problem">Your hair loss<br>has a cause.<br><em>Find it first.</em></h1>
+        <p class="s-empathy">Most people spend months on oils, shampoos, and supplements without knowing why their hair is falling. Different types of hair loss look the same from the outside but need completely different treatments. We look closely at your scalp to find the real cause before recommending anything.</p>
+        <div class="s-plan">
+          <div class="p-step"><div class="p-num">1</div><div class="p-txt"><strong>We examine your scalp closely.</strong> Using a special magnifying tool, we look at your scalp and hair roots to find out exactly what's happening.</div></div>
+          <div class="p-step"><div class="p-num">2</div><div class="p-txt"><strong>Treatment matched to your cause.</strong> Tablets, creams, or procedures — only what will actually help your specific type of hair loss.</div></div>
+          <div class="p-step"><div class="p-num">3</div><div class="p-txt"><strong>Additional treatments only if needed.</strong> Procedures like PRP are suggested only when they will genuinely make a difference for you.</div></div>
+        </div>
+        <div class="s-actions">
+          <a href="#contact" class="btn-book">Book Consultation</a>
+          <a href="https://wa.me/919345410038" class="btn-outline" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="s-card">
+          <div class="s-card-top"><div class="s-card-label">Hair Loss</div><div class="s-card-title">Find out why.<br>Then treat it.</div></div>
+          <div class="s-img"><div class="s-img-grid"></div><div class="s-img-content"><span class="s-img-icon">◫</span><div class="s-img-lbl"><span>Before / After</span>Place result image here</div></div></div>
+          <div class="s-card-stats"><div class="s-stat"><div class="s-stat-n">PRP</div><div class="s-stat-l">Hair Therapy</div></div><div class="s-stat"><div class="s-stat-n">LLLT</div><div class="s-stat-l">Low-Level Laser</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 — Laser -->
+    <div class="hero-slide" data-s="4">
+      <div class="s-bg"></div>
+      <div class="s-left">
+        <div class="s-pill">Condition 04</div>
+        <h1 class="s-problem">The right laser<br>for your skin.<br><em>Not just any laser.</em></h1>
+        <p class="s-empathy">Having 9 laser machines means nothing if the wrong one is used on you. Different skin problems need different types of laser. The doctor — not a technician — decides which laser to use, at what strength, and for how long. That's what makes the difference.</p>
+        <div class="s-plan">
+          <div class="p-step"><div class="p-num">1</div><div class="p-txt"><strong>We examine your skin first.</strong> We look at what needs to be treated and how deep the problem is before choosing any machine.</div></div>
+          <div class="p-step"><div class="p-num">2</div><div class="p-txt"><strong>The doctor sets everything.</strong> How strong, how long, how many pulses — all decided by the doctor for your skin, not a preset programme.</div></div>
+          <div class="p-step"><div class="p-num">3</div><div class="p-txt"><strong>We check the results after every session.</strong> If something needs to change, we change it. You're not locked into a fixed plan.</div></div>
+        </div>
+        <div class="s-actions">
+          <a href="#contact" class="btn-book">Book Consultation</a>
+          <a href="https://wa.me/919345410038" class="btn-outline" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="s-card">
+          <div class="s-card-top"><div class="s-card-label">Laser Treatments</div><div class="s-card-title">9 systems.<br>One right choice.</div></div>
+          <div class="s-img"><div class="s-img-grid"></div><div class="s-img-content"><span class="s-img-icon">⬡</span><div class="s-img-lbl"><span>Before / After</span>Place result image here</div></div></div>
+          <div class="s-card-stats"><div class="s-stat"><div class="s-stat-n">9</div><div class="s-stat-l">Laser Systems</div></div><div class="s-stat"><div class="s-stat-n">MD</div><div class="s-stat-l">Supervised</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 — Anti-Aging -->
+    <div class="hero-slide" data-s="5">
+      <div class="s-bg"></div>
+      <div class="s-left">
+        <div class="s-pill">Condition 05</div>
+        <h1 class="s-problem">Look refreshed.<br>Not altered.<br><em>Not overdone.</em></h1>
+        <p class="s-empathy">The goal is to look like yourself — just more rested and fresh. Not to look like you've had something done. Treatments are chosen only when there is a genuine reason to use them. Nothing is recommended just to fill up a session.</p>
+        <div class="s-plan">
+          <div class="p-step"><div class="p-num">1</div><div class="p-txt"><strong>We look at your face carefully first.</strong> What has changed with age, and what actually needs attention — before suggesting any treatment.</div></div>
+          <div class="p-step"><div class="p-num">2</div><div class="p-txt"><strong>The right treatment for the right area.</strong> Skin tightening, lifting, or volume — each has a specific solution and not every face needs every treatment.</div></div>
+          <div class="p-step"><div class="p-num">3</div><div class="p-txt"><strong>Gradual, natural improvement.</strong> Results build over a few weeks. People notice you look good — they don't know you've had a treatment.</div></div>
+        </div>
+        <div class="s-actions">
+          <a href="#contact" class="btn-book">Book Consultation</a>
+          <a href="https://wa.me/919345410038" class="btn-outline" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="s-card">
+          <div class="s-card-top"><div class="s-card-label">Anti-Aging &amp; Rejuvenation</div><div class="s-card-title">Restore.<br>Not transform.</div></div>
+          <div class="s-img"><div class="s-img-grid"></div><div class="s-img-content"><span class="s-img-icon">◌</span><div class="s-img-lbl"><span>Before / After</span>Place result image here</div></div></div>
+          <div class="s-card-stats"><div class="s-stat"><div class="s-stat-n">HIFU</div><div class="s-stat-l">Lifting</div></div><div class="s-stat"><div class="s-stat-n">MNRF</div><div class="s-stat-l">Tightening</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6 — Dermatosurgery -->
+    <div class="hero-slide" data-s="6">
+      <div class="s-bg"></div>
+      <div class="s-left">
+        <div class="s-pill">Condition 06</div>
+        <h1 class="s-problem">Remove it once.<br>Remove it cleanly.<br><em>Remove it correctly.</em></h1>
+        <p class="s-empathy">Moles, skin tags, warts, cysts, and small growths on the skin should be removed by a skin doctor — not at a beauty salon. Done properly, there is minimal scarring and no return. Done poorly, it leaves scars and comes back.</p>
+        <div class="s-plan">
+          <div class="p-step"><div class="p-num">1</div><div class="p-txt"><strong>We examine the growth first.</strong> Before removing anything, we check what type it is and whether it needs further testing.</div></div>
+          <div class="p-step"><div class="p-num">2</div><div class="p-txt"><strong>The right removal method is chosen.</strong> Different growths are removed in different ways — the method is matched to your specific case.</div></div>
+          <div class="p-step"><div class="p-num">3</div><div class="p-txt"><strong>Clean procedure, proper aftercare.</strong> Done in hygienic conditions with clear instructions on how to care for the skin afterwards.</div></div>
+        </div>
+        <div class="s-actions">
+          <a href="#contact" class="btn-book">Book Consultation</a>
+          <a href="https://wa.me/919345410038" class="btn-outline" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="s-right">
+        <div class="s-card">
+          <div class="s-card-top"><div class="s-card-label">Dermatosurgery</div><div class="s-card-title">Done right.<br>Done once.</div></div>
+          <div class="s-img"><div class="s-img-grid"></div><div class="s-img-content"><span class="s-img-icon">✦</span><div class="s-img-lbl"><span>Before / After</span>Place result image here</div></div></div>
+          <div class="s-card-stats"><div class="s-stat"><div class="s-stat-n">MD</div><div class="s-stat-l">DVL Surgeon</div></div><div class="s-stat"><div class="s-stat-n">Sterile</div><div class="s-stat-l">Procedure</div></div></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /slides -->
+
+  <div class="hero-nav">
+    <div class="h-dots" id="heroDots"></div>
+    <div class="h-arrows">
+      <button class="h-arr" id="heroPrev">&#8592;</button>
+      <button class="h-arr" id="heroNext">&#8594;</button>
+    </div>
+  </div>
+  <div class="hero-counter"><b id="heroNum">01</b> / 06</div>
+  <div class="hero-progress"><div class="hero-bar" id="heroBar"></div></div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">MD DVL</div><div class="stat-label">Skin specialist degree in dermatology</div></div>
+    <div class="stat-item"><div class="stat-num">Reg. 116277</div><div class="stat-label">Tamil Nadu Medical Council certified</div></div>
+    <div class="stat-item"><div class="stat-num">9 Lasers</div><div class="stat-label">All machines at the clinic in Erode</div></div>
+    <div class="stat-item"><div class="stat-num">₹2Cr+</div><div class="stat-label">Invested in treatment equipment</div></div>
+    <div class="stat-item"><div class="stat-num">MMC</div><div class="stat-label">Trained at Madras Medical College</div></div>
+  </div>
+</div>
+
+<!-- PATIENT VOICE -->
+<div class="pvb">
+  <div class="pvb-inner">
+    <div><div class="pvb-q">"I tried 3 clinics before coming here. First time someone explained what type of acne I actually had."</div><div class="pvb-a">— Acne patient, Erode</div></div>
+    <div class="pvb-div"></div>
+    <div><div class="pvb-q">"He told me how many sessions it would take and what improvement to expect. No false promises."</div><div class="pvb-a">— Scar treatment patient</div></div>
+    <div class="pvb-div"></div>
+    <div><div class="pvb-q">"I expected a package to be sold to me. Instead I got a diagnosis. That was the difference."</div><div class="pvb-a">— Pigmentation patient</div></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="si">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow">About the Doctor</div>
+        <div class="about-lead">Treat the skin right.<br>Be honest about results.<br><em>That's it.</em></div>
+        <p class="about-p">Dr. Howthul Alam Raja B completed his MD in Dermatology at Madras Medical College — one of the most respected medical colleges in India. He is a qualified skin specialist and skin surgeon, registered with the Tamil Nadu Medical Council.</p>
+        <p class="about-p">Before starting his own clinic in Erode, he worked in government hospitals for several years. That experience taught him to focus on what actually works — not on what is easiest to sell. He will not recommend a treatment unless it is genuinely needed for your condition.</p>
+        <p class="about-p">Dr. Kaviya (MD DVL) and Dr. Fathima (MBBS) are part of the clinic team. Every patient is seen by a qualified doctor — not just a therapist or technician.</p>
+      </div>
+      <div class="cred-grid">
+        <div class="cred-item"><div class="cred-icon">🎓</div><div><div class="cred-label">Qualification</div><div class="cred-val">MBBS, MD DVL</div><div class="cred-sub">Madras Medical College, Chennai</div></div></div>
+        <div class="cred-item"><div class="cred-icon">⚕</div><div><div class="cred-label">Specialisation</div><div class="cred-val">Clinical &amp; Aesthetic Dermatology</div><div class="cred-sub">Dermatosurgery · Laser Medicine</div></div></div>
+        <div class="cred-item"><div class="cred-icon">📋</div><div><div class="cred-label">Registration</div><div class="cred-val">No. 116277</div><div class="cred-sub">Tamil Nadu Medical Council</div></div></div>
+        <div class="cred-item"><div class="cred-icon">📍</div><div><div class="cred-label">Location</div><div class="cred-val">No. 306, Nasiyanur Road</div><div class="cred-sub">Narayanavalasu, Erode – 638011</div></div></div>
+        <div class="cred-item"><div class="cred-icon">👩‍⚕️</div><div><div class="cred-label">Clinical Team</div><div class="cred-val">Dr. Kaviya (MD DVL) · Dr. Fathima (MBBS)</div><div class="cred-sub">Supervised clinical practice</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS — Tab style -->
+<section class="treatments" id="treatments">
+  <div class="si">
+    <div class="eyebrow">What We Treat</div>
+    <h2 class="stitle">Whatever your skin concern,<br><strong>we start by understanding it.</strong></h2>
+    <p class="ssub">We don't recommend a treatment until we know what is actually causing your problem. Click on your concern below to see how we approach it.</p>
+
+    <div class="tr-tabs" id="trTabs">
+      <button class="tr-tab on" data-panel="0">Acne &amp; Scars</button>
+      <button class="tr-tab" data-panel="1">Pigmentation</button>
+      <button class="tr-tab" data-panel="2">Hair Loss</button>
+      <button class="tr-tab" data-panel="3">Laser</button>
+      <button class="tr-tab" data-panel="4">Anti-Aging</button>
+      <button class="tr-tab" data-panel="5">Dermatosurgery</button>
+    </div>
+
+    <div class="tr-panels">
+      <div class="tr-panel on">
+        <div class="tr-content">
+          <div class="tr-outcome">Stop breaking out. Fade what's left.</div>
+          <div class="tr-name">Acne &amp; Acne Scars</div>
+          <p class="tr-desc">If you've been using creams for months and your acne keeps coming back, the problem is not your skin — it's that the real cause hasn't been found yet. We first stop the active breakouts, then treat the marks and scars that are left behind. Each step is done in the right order.</p>
+          <div class="tr-steps">
+            <div class="tr-step"><div class="tr-step-num">01</div><div class="tr-step-txt"><strong>We find out what type of acne you have</strong> — not all acne is the same, and the treatment depends on the type</div></div>
+            <div class="tr-step"><div class="tr-step-num">02</div><div class="tr-step-txt"><strong>We stop the breakouts first</strong> — tablets and creams prescribed specifically for your skin</div></div>
+            <div class="tr-step"><div class="tr-step-num">03</div><div class="tr-step-txt"><strong>Then we treat the scars</strong> — once breakouts are under control, the right laser is used for your type of scars</div></div>
+          </div>
+          <div class="tr-tags">
+            <span class="tr-tag">Medical</span><span class="tr-tag">CO₂ Laser</span><span class="tr-tag">MNRF</span><span class="tr-tag">Chemical Peel</span>
+          </div>
+          <div class="tr-cta-row">
+            <a href="#contact" class="btn-book">Book Consultation</a>
+            <a href="https://wa.me/919345410038" class="btn-outline" target="_blank">Ask on WhatsApp</a>
+          </div>
+        </div>
+        <div class="tr-visual">
+          <div class="tr-img-ph"><div class="tr-img-grid"></div><span class="tr-img-icon">◎</span><div class="tr-img-lbl"><span>Before / After</span>Place acne or scar result here</div></div>
+        </div>
+      </div>
+
+      <div class="tr-panel">
+        <div class="tr-content">
+          <div class="tr-outcome">Even skin tone. Not just brightening.</div>
+          <div class="tr-name">Pigmentation &amp; Melasma</div>
+          <p class="tr-desc">Dark patches, uneven skin tone, and patches that won't fade are not all the same problem. Using a brightening cream or the wrong laser on the wrong type of darkening can make things worse. We first look carefully at your skin to find out exactly what type of darkening you have — then we treat it correctly.</p>
+          <div class="tr-steps">
+            <div class="tr-step"><div class="tr-step-num">01</div><div class="tr-step-txt"><strong>We identify what type of darkening you have</strong> — melasma, dark marks left by acne, sun damage, and freckles all need different treatments</div></div>
+            <div class="tr-step"><div class="tr-step-num">02</div><div class="tr-step-txt"><strong>We choose the right treatment for your type</strong> — laser, light treatment, or a peel — whichever suits your skin best</div></div>
+            <div class="tr-step"><div class="tr-step-num">03</div><div class="tr-step-txt"><strong>We explain how to keep it from coming back</strong> — what to use daily, what to avoid, and how to protect your skin</div></div>
+          </div>
+          <div class="tr-tags"><span class="tr-tag">Q-switch</span><span class="tr-tag">Pico Laser</span><span class="tr-tag">IPL</span><span class="tr-tag">Chemical Peel</span></div>
+          <div class="tr-cta-row"><a href="#contact" class="btn-book">Book Consultation</a><a href="https://wa.me/919345410038" class="btn-outline" target="_blank">Ask on WhatsApp</a></div>
+        </div>
+        <div class="tr-visual"><div class="tr-img-ph"><div class="tr-img-grid"></div><span class="tr-img-icon">◈</span><div class="tr-img-lbl"><span>Before / After</span>Place pigmentation result here</div></div></div>
+      </div>
+
+      <div class="tr-panel">
+        <div class="tr-content">
+          <div class="tr-outcome">Find out why. Then treat it.</div>
+          <div class="tr-name">Hair Loss</div>
+          <p class="tr-desc">Hair fall has many different causes — stress, hormones, nutritional deficiency, scalp conditions, or genetic hair loss. Each type looks similar but needs a completely different treatment. Spending money on oils or supplements without knowing the cause is why most people don't see results. We find the cause first, then treat it.</p>
+          <div class="tr-steps">
+            <div class="tr-step"><div class="tr-step-num">01</div><div class="tr-step-txt"><strong>We examine your scalp closely</strong> — using a magnifying tool to look at your scalp and hair roots and find the real reason for your hair fall</div></div>
+            <div class="tr-step"><div class="tr-step-num">02</div><div class="tr-step-txt"><strong>Treatment is matched to your specific cause</strong> — tablets, creams, or procedures only as needed for your type of hair loss</div></div>
+            <div class="tr-step"><div class="tr-step-num">03</div><div class="tr-step-txt"><strong>Extra treatments only if they will genuinely help</strong> — PRP injections or laser therapy are added only when they make a real difference for your case</div></div>
+          </div>
+          <div class="tr-tags"><span class="tr-tag">Trichoscopy</span><span class="tr-tag">PRP</span><span class="tr-tag">LLLT</span><span class="tr-tag">Medical</span></div>
+          <div class="tr-cta-row"><a href="#contact" class="btn-book">Book Consultation</a><a href="https://wa.me/919345410038" class="btn-outline" target="_blank">Ask on WhatsApp</a></div>
+        </div>
+        <div class="tr-visual"><div class="tr-img-ph"><div class="tr-img-grid"></div><span class="tr-img-icon">◫</span><div class="tr-img-lbl"><span>Before / After</span>Place hair result here</div></div></div>
+      </div>
+
+      <div class="tr-panel">
+        <div class="tr-content">
+          <div class="tr-outcome">The right laser for your skin.</div>
+          <div class="tr-name">Laser Treatments</div>
+          <p class="tr-desc">We have 9 laser and light machines at the clinic. But having many machines only helps if the right one is chosen for your problem. Lasers for removing scars are different from lasers for pigmentation or for hair removal. The doctor — not a staff member — decides which machine to use and at what setting for your skin.</p>
+          <div class="tr-steps">
+            <div class="tr-step"><div class="tr-step-num">01</div><div class="tr-step-txt"><strong>We examine your skin first</strong> — we look at what needs treating and how deep the problem is before choosing any laser</div></div>
+            <div class="tr-step"><div class="tr-step-num">02</div><div class="tr-step-txt"><strong>The doctor decides everything</strong> — the strength, speed, and duration of the laser is set by the doctor for your skin, not a preset button</div></div>
+            <div class="tr-step"><div class="tr-step-num">03</div><div class="tr-step-txt"><strong>We review progress after each session</strong> — if anything needs to be adjusted, we adjust it before the next session</div></div>
+          </div>
+          <div class="tr-tags"><span class="tr-tag">CO₂</span><span class="tr-tag">Q-switch</span><span class="tr-tag">Diode</span><span class="tr-tag">IPL</span><span class="tr-tag">Excimer</span><span class="tr-tag">LED PDT</span></div>
+          <div class="tr-cta-row"><a href="#contact" class="btn-book">Book Consultation</a><a href="https://wa.me/919345410038" class="btn-outline" target="_blank">Ask on WhatsApp</a></div>
+        </div>
+        <div class="tr-visual"><div class="tr-img-ph"><div class="tr-img-grid"></div><span class="tr-img-icon">⬡</span><div class="tr-img-lbl"><span>Before / After</span>Place laser result here</div></div></div>
+      </div>
+
+      <div class="tr-panel">
+        <div class="tr-content">
+          <div class="tr-outcome">Look refreshed. Not different.</div>
+          <div class="tr-name">Anti-Aging &amp; Rejuvenation</div>
+          <p class="tr-desc">As we get older, our skin loses firmness, develops fine lines, and the face loses some of its shape. The goal of treatment is not to look younger — it's to look like yourself, just fresher and more rested. Nothing is suggested unless there is a clear reason to do it. You will not be pushed to take more treatments than you need.</p>
+          <div class="tr-steps">
+            <div class="tr-step"><div class="tr-step-num">01</div><div class="tr-step-txt"><strong>We look at your face carefully first</strong> — what has changed with age and which areas actually need attention</div></div>
+            <div class="tr-step"><div class="tr-step-num">02</div><div class="tr-step-txt"><strong>The right treatment for each area</strong> — skin tightening, lifting, or filling — only what is genuinely needed and where it belongs</div></div>
+            <div class="tr-step"><div class="tr-step-num">03</div><div class="tr-step-txt"><strong>Results build gradually over weeks</strong> — people will notice you look good, but won't know exactly why</div></div>
+          </div>
+          <div class="tr-tags"><span class="tr-tag">HIFU</span><span class="tr-tag">MNRF</span><span class="tr-tag">Injectables</span><span class="tr-tag">LED PDT</span></div>
+          <div class="tr-cta-row"><a href="#contact" class="btn-book">Book Consultation</a><a href="https://wa.me/919345410038" class="btn-outline" target="_blank">Ask on WhatsApp</a></div>
+        </div>
+        <div class="tr-visual"><div class="tr-img-ph"><div class="tr-img-grid"></div><span class="tr-img-icon">◌</span><div class="tr-img-lbl"><span>Before / After</span>Place anti-aging result here</div></div></div>
+      </div>
+
+      <div class="tr-panel">
+        <div class="tr-content">
+          <div class="tr-outcome">Remove it once. Correctly.</div>
+          <div class="tr-name">Dermatosurgery</div>
+          <p class="tr-desc">Moles, skin tags, warts, small cysts, and other growths on the skin should always be removed by a qualified skin doctor — not at a parlour or general clinic. When done correctly, there is very little scarring and the growth does not come back. When done incorrectly, it leaves marks and often grows back.</p>
+          <div class="tr-steps">
+            <div class="tr-step"><div class="tr-step-num">01</div><div class="tr-step-txt"><strong>We check the growth first</strong> — we examine it carefully to understand what it is and whether any testing is needed before removing it</div></div>
+            <div class="tr-step"><div class="tr-step-num">02</div><div class="tr-step-txt"><strong>We choose the right removal method</strong> — different types of growths are removed in different ways, matched to your specific case</div></div>
+            <div class="tr-step"><div class="tr-step-num">03</div><div class="tr-step-txt"><strong>Clean procedure with clear aftercare</strong> — done hygienically, with simple instructions on how to look after the skin afterwards</div></div>
+          </div>
+          <div class="tr-tags"><span class="tr-tag">Hyfrecator</span><span class="tr-tag">Excision</span><span class="tr-tag">Histopathology</span><span class="tr-tag">Sterile</span></div>
+          <div class="tr-cta-row"><a href="#contact" class="btn-book">Book Consultation</a><a href="https://wa.me/919345410038" class="btn-outline" target="_blank">Ask on WhatsApp</a></div>
+        </div>
+        <div class="tr-visual"><div class="tr-img-ph"><div class="tr-img-grid"></div><span class="tr-img-icon">✦</span><div class="tr-img-lbl"><span>Before / After</span>Place surgery result here</div></div></div>
+      </div>
+    </div><!-- /panels -->
+
+  </div>
+</section>
+
+<!-- RIGHT FOR YOU -->
+<section class="rfy" id="rfy">
+  <div class="si">
+    <div class="eyebrow">Honest Filter</div>
+    <h2 class="stitle">Is this clinic<br><em>right for you?</em></h2>
+    <p class="ssub">We'd rather be upfront than waste your time and money. This clinic works well for some patients — and may not be the right fit for others.</p>
+    <div class="rfy-grid">
+      <div></div>
+      <div class="rfy-cols">
+        <div class="rfy-col yes">
+          <span class="rfy-badge yes">This clinic is for you if</span>
+          <div class="rfy-item"><span class="rfy-ico yes">✓</span><span>You've tried other clinics before and want to understand why nothing worked</span></div>
+          <div class="rfy-item"><span class="rfy-ico yes">✓</span><span>You want to know what is actually wrong with your skin before spending money</span></div>
+          <div class="rfy-item"><span class="rfy-ico yes">✓</span><span>You are willing to follow the treatment plan and give it the time it needs</span></div>
+          <div class="rfy-item"><span class="rfy-ico yes">✓</span><span>You want honest answers — even if they are not what you hoped to hear</span></div>
+          <div class="rfy-item"><span class="rfy-ico yes">✓</span><span>You care more about getting the right treatment than getting the cheapest one</span></div>
+        </div>
+        <div class="rfy-col">
+          <span class="rfy-badge no">Probably not the right fit if</span>
+          <div class="rfy-item"><span class="rfy-ico no">✗</span><span>You are looking for the lowest price or a same-day bundled package</span></div>
+          <div class="rfy-item"><span class="rfy-ico no">✗</span><span>You want a guaranteed result without following the steps involved</span></div>
+          <div class="rfy-item"><span class="rfy-ico no">✗</span><span>You expect one session to solve everything</span></div>
+          <div class="rfy-item"><span class="rfy-ico no">✗</span><span>You want a beauty salon atmosphere rather than a medical clinic</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section class="tech" id="technology">
+  <div class="si">
+    <div class="tech-intro">
+      <div>
+        <div class="eyebrow">Our Equipment</div>
+        <h2 class="stitle">The machines we use<br><em>and what they do.</em></h2>
+        <p class="ssub">All 9 machines are physically present at the clinic in Erode. The doctor decides which one to use for your skin — not a general staff member.</p>
+      </div>
+      <div class="tech-note"><p>Every machine listed here is at the clinic. Nothing is outsourced. Treatment settings are decided by the doctor, not by a pre-set programme or a technician.</p></div>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card"><div class="tech-badge">Scar Removal</div><div class="tech-name">Quanta Youlaser MT</div><div class="tech-type">CO₂ Laser · Acne Scars · Skin Texture</div><p class="tech-desc">A high-quality Italian laser used mainly for deep acne scars and uneven skin texture. It removes a very thin layer of damaged skin, allowing fresh, smoother skin to grow in its place.</p></div>
+      <div class="tech-card"><div class="tech-badge">Pigmentation</div><div class="tech-name">Quanta Q-Plus A Evo</div><div class="tech-type">Q-switch Laser · Dark Spots · Tattoo Removal</div><p class="tech-desc">A laser that targets dark pigment in the skin without damaging the surrounding area. Used for dark spots, uneven patches, melasma, and tattoo removal.</p></div>
+      <div class="tech-card"><div class="tech-badge">Light + Pigment</div><div class="tech-name">Quanta Light B Evo</div><div class="tech-type">IPL Light Treatment · Skin Brightening</div><p class="tech-desc">Uses broad-spectrum light to treat scattered pigmentation, skin redness, and sun damage across a wider area. Also useful for skin brightening and refreshing dull skin.</p></div>
+      <div class="tech-card"><div class="tech-badge">Scars + Pores</div><div class="tech-name">Vacuum Microneedling RF</div><div class="tech-type">MNRF · Rolling Scars · Skin Tightening</div><p class="tech-desc">Tiny needles deliver radio-frequency energy under the skin to stimulate collagen production. Used for rolling scars, large pores, and loose skin. More comfortable than older versions of this treatment.</p></div>
+      <div class="tech-card"><div class="tech-badge">Vitiligo · Psoriasis</div><div class="tech-name">Kernel Excimer 308nm</div><div class="tech-type">Targeted Light Therapy</div><p class="tech-desc">A specialised light therapy machine that targets only the affected patches of skin — used for vitiligo (white patches) and psoriasis. Healthy surrounding skin is not exposed to the light.</p></div>
+      <div class="tech-card"><div class="tech-badge">Skin Growths</div><div class="tech-name">Conmed Hyfrecator 2000</div><div class="tech-type">Electrosurgery · Skin Tag · Wart Removal</div><p class="tech-desc">A precision electrosurgical tool used to remove small skin growths — skin tags, warts, moles, and tiny cysts — with minimal scarring when used by a trained doctor.</p></div>
+      <div class="tech-card"><div class="tech-badge">Hair Removal</div><div class="tech-name">Diode Laser</div><div class="tech-type">Permanent Hair Reduction · All Skin Tones</div><p class="tech-desc">A laser that targets hair follicles to reduce hair growth permanently over multiple sessions. Works well on Indian skin tones. Settings are adjusted for your skin colour and hair type.</p></div>
+      <div class="tech-card"><div class="tech-badge">Acne + Healing</div><div class="tech-name">LED Light Therapy</div><div class="tech-type">LED PDT · Acne · Skin Recovery</div><p class="tech-desc">Different colours of LED light have different effects — blue light kills acne-causing bacteria, red light helps skin heal faster, and near-infrared light reduces inflammation. Often used after other treatments to speed up recovery.</p></div>
+      <div class="tech-card"><div class="tech-badge">Skin Tightening</div><div class="tech-name">HIFU</div><div class="tech-type">Ultrasound Lifting · Non-surgical Firming</div><p class="tech-desc">Uses focused ultrasound energy to tighten the deep layers of skin without surgery. Results appear gradually over 2–3 months. The skin looks firmer and lifted without looking "done."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="results" id="results">
+  <div class="si">
+    <div class="res-header">
+      <div>
+        <div class="eyebrow">Patient Results</div>
+        <h2 class="stitle">Real patients.<br><em>Real results.</em></h2>
+      </div>
+      <p class="ssub" style="max-width:360px;">Real patients. Real results. Shared with consent. Not digitally altered.</p>
+    </div>
+    <div class="res-grid">
+      <div class="res-card"><div class="res-imgs"><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>BEFORE</div><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>AFTER</div></div><div class="res-meta"><div class="res-cond">Cystic Acne</div><div class="res-detail">8 weeks · Medical + Procedural</div></div></div>
+      <div class="res-card"><div class="res-imgs"><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>BEFORE</div><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>AFTER</div></div><div class="res-meta"><div class="res-cond">Atrophic Acne Scars</div><div class="res-detail">3 sessions · CO₂ + MNRF</div></div></div>
+      <div class="res-card"><div class="res-imgs"><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>BEFORE</div><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>AFTER</div></div><div class="res-meta"><div class="res-cond">Facial Pigmentation</div><div class="res-detail">4 sessions · Q-switch Laser</div></div></div>
+      <div class="res-card"><div class="res-imgs"><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>BEFORE</div><div class="res-slot"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>AFTER</div></div><div class="res-meta"><div class="res-cond">Post-Acne Marks</div><div class="res-detail">Chemical Peel Series</div></div></div>
+    </div>
+    <div class="res-note"><p>All photos are from real patients treated at this clinic · Shared with their permission · Photos are not edited or filtered · Your results may vary depending on the severity of your condition, your skin type, and how closely you follow the aftercare instructions.</p></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="si">
+    <div class="eyebrow">Patient Experiences</div>
+    <h2 class="stitle">In their own<br><em>words.</em></h2>
+    <div class="test-grid">
+      <div class="test-card"><span class="test-mark">"</span><p class="test-txt">I had tried three different clinics for my acne before coming here. What was different was that Dr. Alam actually explained why my previous treatments hadn't worked, and what he was going to do differently. For the first time, I felt like someone was actually diagnosing me rather than just selling me a package.</p><div class="test-sep"></div><div class="test-meta"><div class="test-av">R</div><div><div class="test-name">Ramya S.</div><div class="test-cond">Acne · Previously treated elsewhere</div></div></div></div>
+      <div class="test-card"><span class="test-mark">"</span><p class="test-txt">The laser procedure was more comfortable than I expected, and the results were visible after the very first session. What I appreciated most was that the doctor told me exactly how many sessions to expect and what percentage of improvement was realistic. No false promises.</p><div class="test-sep"></div><div class="test-meta"><div class="test-av">K</div><div><div class="test-name">Karthikeyan M.</div><div class="test-cond">Laser Treatment · Scar reduction</div></div></div></div>
+      <div class="test-card"><span class="test-mark">"</span><p class="test-txt">I have stubborn pigmentation for years. Other places just gave me creams. Here the approach was completely different — he explained the type of pigmentation I had and why certain treatments wouldn't work. Three months in, the difference is significant.</p><div class="test-sep"></div><div class="test-meta"><div class="test-av">P</div><div><div class="test-name">Priya L.</div><div class="test-cond">Pigmentation · Long-standing case</div></div></div></div>
+      <div class="test-card"><span class="test-mark">"</span><p class="test-txt">I came in expecting to be told to buy many products. Instead I got a clear, honest assessment. Dr. Alam told me what would help and what wouldn't, and didn't push treatments I didn't need. That kind of ethical practice is rare, and it's why I've recommended this clinic to my family.</p><div class="test-sep"></div><div class="test-meta"><div class="test-av">S</div><div><div class="test-name">Suresh V.</div><div class="test-cond">General consultation · Ongoing patient</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why" id="why">
+  <div class="si">
+    <div class="eyebrow">Why This Clinic</div>
+    <h2 class="stitle">A skin doctor.<br><em>Not a beauty parlour.</em></h2>
+    <div class="why-grid">
+      <div class="diff-list">
+        <div class="diff"><div class="diff-ico">🔍</div><div><div class="diff-ttl">We find out what's wrong first</div><p class="diff-b">We don't recommend a treatment until we understand what is causing your problem. Your skin type, your history, and your specific condition all matter before we suggest anything.</p></div></div>
+        <div class="diff"><div class="diff-ico">🎓</div><div><div class="diff-ttl">You see a real skin doctor — not a therapist</div><p class="diff-b">Dr. Alam holds an MD in Dermatology — a postgraduate medical degree in skin conditions. This is not a cosmetology certificate. When things go right or wrong with your skin, the difference matters.</p></div></div>
+        <div class="diff"><div class="diff-ico">📊</div><div><div class="diff-ttl">We tell you what to expect — honestly</div><p class="diff-b">Before any treatment starts, you will be told how many sessions it usually takes, how much improvement is realistic, and how long results last. No exaggerated promises.</p></div></div>
+        <div class="diff"><div class="diff-ico">⚙️</div><div><div class="diff-ttl">The machines are used correctly</div><p class="diff-b">Having good machines only matters if they're used properly. The doctor sets the treatment — not a staff member following a script. That's what protects your skin and gives results.</p></div></div>
+      </div>
+      <div class="consult-card">
+        <div class="consult-ttl">What happens at your first visit</div>
+        <div class="c-pt"><div class="c-check">✓</div><div class="c-txt">The doctor examines your skin properly — not just a quick look</div></div>
+        <div class="c-pt"><div class="c-check">✓</div><div class="c-txt">You are told clearly what the problem is and what is causing it</div></div>
+        <div class="c-pt"><div class="c-check">✓</div><div class="c-txt">You get a treatment plan with realistic timelines — no vague promises</div></div>
+        <div class="c-pt"><div class="c-check">✓</div><div class="c-txt">No pressure to book or pay for anything on the same day</div></div>
+        <div class="c-pt"><div class="c-check">✓</div><div class="c-txt">Your progress is tracked from the very first visit with photos</div></div>
+        <div class="c-pt"><div class="c-check">✓</div><div class="c-txt">You can reach the doctor directly with questions — not just support staff</div></div>
+        <div class="c-cta-row">
+          <a href="#contact" class="btn-book-inv">Book a Consultation</a>
+          <a href="https://wa.me/919345410038" class="btn-wa" target="_blank">💬 WhatsApp for Quick Query</a>
+          <a href="/cdn-cgi/l/email-protection#335741525f525e40585a5d505f5a5d5a5073545e525a5f1d505c5e" class="btn-ghost-inv">Email the Clinic</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="si">
+    <div class="eyebrow">Find Us</div>
+    <h2 class="stitle">Come visit the clinic<br><em>in Erode.</em></h2>
+    <div class="contact-grid">
+      <div>
+        <div class="clinic-img-ph">
+          <div class="cip-inner">
+            <span class="cip-icon">🏥</span>
+            <div class="cip-lbl">Clinic Photo</div>
+            <div class="cip-sub">Replace with clinic exterior or interior image</div>
+          </div>
+        </div>
+        <div class="cd-list">
+          <div class="cd"><div class="cd-icon">📍</div><div><div class="cd-lbl">Address</div><div class="cd-val">No. 306, Nasiyanur Road, Narayanavalasu<br>Erode – 638011, Tamil Nadu</div></div></div>
+          <div class="cd"><div class="cd-icon">📞</div><div><div class="cd-lbl">Phone</div><div class="cd-val"><a href="tel:+919345410038">+91 93454 10038</a></div></div></div>
+          <div class="cd"><div class="cd-icon">✉</div><div><div class="cd-lbl">Email</div><div class="cd-val"><a href="/cdn-cgi/l/email-protection#f29680939e939f81999b9c919e9b9c9b91b2959f939b9edc919d9f"><span class="__cf_email__" data-cfemail="a1c5d3c0cdc0ccd2cac8cfc2cdc8cfc8c2e1c6ccc0c8cd8fc2cecc">[email&#160;protected]</span></a></div></div></div>
+          <div class="cd"><div class="cd-icon">🕐</div><div><div class="cd-lbl">Hours</div><div class="cd-val">Monday – Saturday: 10:00 AM – 7:00 PM<br><span style="font-size:.78rem;color:var(--slate-soft);">Appointment preferred</span></div></div></div>
+          <div class="cd"><div class="cd-icon">▶</div><div><div class="cd-lbl">YouTube</div><div class="cd-val"><a href="https://youtube.com/@skinScienceDrHowthulAlam" target="_blank">Skin Science with Dr. Howthul Alam</a></div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="map-wrap">
+          <div class="map-hdr">
+            <span class="map-lbl">Find Us</span>
+            <a class="map-dir" href="https://www.google.com/maps/search/Dr.+Alam+Skin+Clinic+306+Nasiyanur+Road+Erode" target="_blank">Get Directions ↗</a>
+          </div>
+          <!--
+            TO ACTIVATE GOOGLE MAPS:
+            1. Search your clinic on Google Maps
+            2. Click Share → Embed a map → Copy the iframe HTML
+            3. Delete the map-ph div below
+            4. Paste the iframe code here
+          -->
+          <div class="map-ph">
+            <div class="map-lines"></div>
+            <div class="map-content">
+              <div class="map-pin-wrap"><div class="map-dot"></div><div class="map-ring"></div></div>
+              <div class="map-clinic-name">Dr. Alam's Skin Clinic</div>
+              <div class="map-addr">No. 306, Nasiyanur Road<br>Narayanavalasu, Erode – 638011</div>
+              <a class="map-open" href="https://www.google.com/maps/search/Dr.+Alam+Skin+Clinic+306+Nasiyanur+Road+Erode" target="_blank">Open in Google Maps ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-ttl">How to book a visit</div>
+          <p class="book-body">We see patients by appointment. Your first visit is a proper consultation — the doctor will examine your skin, explain what is happening, and suggest a plan. You won't be pushed to start any treatment on the same day. For quick questions, WhatsApp is the fastest way to reach us.</p>
+          <div class="book-actions">
+            <a href="tel:+919345410038" class="btn-book" style="justify-content:center;">Call to Book — +91 93454 10038</a>
+            <a href="https://wa.me/919345410038?text=Hello%20Dr.%20Alam%2C%20I%20would%20like%20to%20book%20a%20consultation." class="btn-wa" target="_blank">💬 WhatsApp for Quick Enquiry</a>
+            <a href="/cdn-cgi/l/email-protection#65011704090408160e0c0b06090c0b0c06250208040c094b060a08" class="btn-outline" style="justify-content:center;">Email the Clinic</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="f-brand">Dr. Alam's Skin Clinic · Erode</div>
+    <div class="f-reg">Dr. Howthul Alam Raja B · MBBS, MD DVL · Reg. No. 116277 · Tamil Nadu Medical Council</div>
+  </div>
+  <div class="f-disc">This website gives general information only — it is not medical advice. All treatments depend on a proper consultation and examination. Results are different for each person. © 2025 Dr. Alam's Skin Clinic.</div>
+</footer>
+
+<!-- JS: Carousel + Tabs -->
+<script>
+// ── HERO CAROUSEL ──
+(function(){
+  const slides = document.querySelectorAll('.hero-slide');
+  const dotsC  = document.getElementById('heroDots');
+  const bar    = document.getElementById('heroBar');
+  const numEl  = document.getElementById('heroNum');
+  const wrapper= document.getElementById('heroSlides');
+  const total  = slides.length, DUR = 7000;
+  let cur = 0, timer, paused = false;
+
+  // build dots
+  slides.forEach((_,i)=>{
+    const d = document.createElement('button');
+    d.className = 'h-dot' + (i===0 ? ' on' : '');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.addEventListener('click', ()=>goTo(i));
+    dotsC.appendChild(d);
+  });
+  const dots = document.querySelectorAll('.h-dot');
+
+  function goTo(n){
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('on');
+    cur = (n + total) % total;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('on');
+    wrapper.style.transform = `translateX(-${cur*100}%)`;
+    numEl.textContent = String(cur+1).padStart(2,'0');
+    resetBar();
+  }
+
+  function resetBar(){
+    clearTimeout(timer);
+    bar.style.transition = 'none';
+    bar.style.width = '0%';
+    if(paused) return;
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      bar.style.transition = `width ${DUR}ms linear`;
+      bar.style.width = '100%';
+    }));
+    timer = setTimeout(()=>goTo(cur+1), DUR);
+  }
+
+  document.getElementById('heroNext').addEventListener('click', ()=>goTo(cur+1));
+  document.getElementById('heroPrev').addEventListener('click', ()=>goTo(cur-1));
+
+  const heroEl = document.querySelector('.hero');
+  heroEl.addEventListener('mouseenter', ()=>{ paused=true;  resetBar(); });
+  heroEl.addEventListener('mouseleave', ()=>{ paused=false; resetBar(); });
+
+  document.addEventListener('keydown', e=>{
+    if(e.key==='ArrowRight') goTo(cur+1);
+    if(e.key==='ArrowLeft')  goTo(cur-1);
+  });
+
+  let tx = 0;
+  heroEl.addEventListener('touchstart', e=>{ tx = e.touches[0].clientX; }, {passive:true});
+  heroEl.addEventListener('touchend',   e=>{
+    const dx = e.changedTouches[0].clientX - tx;
+    if(Math.abs(dx) > 50){ dx < 0 ? goTo(cur+1) : goTo(cur-1); }
+  }, {passive:true});
+
+  slides[0].classList.add('active');
+  resetBar();
+})();
+
+// ── TREATMENT TABS ──
+(function(){
+  const tabs   = document.querySelectorAll('.tr-tab');
+  const panels = document.querySelectorAll('.tr-panel');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>t.classList.remove('on'));
+      panels.forEach(p=>p.classList.remove('on'));
+      tab.classList.add('on');
+      panels[parseInt(tab.dataset.panel)].classList.add('on');
+    });
+  });
+})();
+</script>
+</body>
+</html>
